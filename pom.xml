@@ -15,11 +15,43 @@
             <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         </properties>
 
+    <repositories>
+        <repository>
+            <id>ticinocom-central</id>
+            <name>Ticinocom Releases</name>
+            <url>http://artifactory.ticino.com:8081/artifactory/libs-release</url>
+        </repository>
+        <repository>
+            <id>ticinocom-snapshots</id>
+            <name>Ticinocom Snapshots</name>
+            <url>http://artifactory.ticino.com:8081/artifactory/libs-snapshot</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>ticinocom-central</id>
+            <name>Ticinocom Releases</name>
+            <url>http://artifactory.ticino.com:8081/artifactory/libs-release</url>
+        </repository>
+        <snapshotRepository>
+            <id>ticinocom-snapshots</id>
+            <name>Ticinocom Snapshots</name>
+            <url>http://artifactory.ticino.com:8081/artifactory/libs-snapshot</url>
+        </snapshotRepository>
+    </distributionManagement>
+
         <dependencies>
             <dependency>
                 <groupId>javax.enterprise</groupId>
                 <artifactId>cdi-api</artifactId>
                 <version>1.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-api</artifactId>
+                <version>7.0</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -45,6 +77,16 @@
                 <artifactId>resteasy-jackson2-provider</artifactId>
                 <version>3.0.19.Final</version>
                 <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.ticinocom.tools.cdi</groupId>
+                <artifactId>cdi-commons</artifactId>
+                <version>1.0.1</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ticinocom.tools.httpclient</groupId>
+                <artifactId>http-client</artifactId>
+                <version>1.0.0</version>
             </dependency>
         </dependencies>
 
