@@ -1,4 +1,4 @@
-package com.frankeser.webapp;
+package com.frankeser.webapp.ws;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

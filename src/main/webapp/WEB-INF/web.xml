@@ -9,7 +9,7 @@
 
     <servlet>
         <servlet-name>Weather</servlet-name>
-        <servlet-class>com.frankeser.webapp.Weather</servlet-class>
+        <servlet-class>com.frankeser.webapp.ws.Weather</servlet-class>
     </servlet>
 
     <servlet-mapping>
